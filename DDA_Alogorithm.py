@@ -26,18 +26,14 @@ def DDA():
     #set initial point of line as x1,y1
     x , y = float(x1) , float(y1)
     
- 
+    print(f"({round(x)}, {round(y)})")  # Round and print the initial point
     
     #loop through the x cordinates incrementing by one
     # calculate corresponding y-cordinate using y = y1 + m(x-x1)
-    i = 0
-    while i < 5:
-        if x == x2 and y == y2:
-            break
-        i += 1
-        x , y = x + 1 , y + m * (x-x1+1)
-    
-        print(f"({x},{y})")
+    while x != x2 or y != y2:  # Iterate until reaching the endpoint
+        x += xinc
+        y += yinc
+        print(f"({round(x)}, {round(y)})")
 
         
         
