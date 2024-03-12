@@ -19,10 +19,7 @@ def DDA():
     steps = max(dx,dy)
     xinc = dx/steps
     yinc = dy/steps
-    
-    # calculate the slope of the line as m = dy/dx
-    m = dy/dx
-     
+
     #set initial point of line as x1,y1
     x , y = float(x1) , float(y1)
     
