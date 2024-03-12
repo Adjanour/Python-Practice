@@ -25,12 +25,23 @@ def DDA():
     
     print(f"({round(x)}, {round(y)})")  # Round and print the initial point
     
-    #loop through the x cordinates incrementing by one
-    # calculate corresponding y-cordinate using y = y1 + m(x-x1)
-    while x != x2 or y != y2:  # Iterate until reaching the endpoint
+   
+    x_cordinates = []
+    y_cordinates = []
+    
+    
+    while round(x) != round(x2) or round(y) != round(y2):  # Iterate until reaching the endpoint
         x += xinc
         y += yinc
+        x_cordinates.append(x)
+        y_cordinates.append(y)
         print(f"({round(x)}, {round(y)})")
+    
+   
+    plt.plot(x_cordinates,y_cordinates,marker="o",markersize=5,markerfacecolor="green")
+    plt.show()
+    
+    
 
         
         
