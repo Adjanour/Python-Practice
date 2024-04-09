@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="productForm" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="productImages">Product Images:</label>
+            <input type="file" name="images" id="productImages" multiple>
+        </div>
+    
+        <button type="submit">Create Product</button>
+    </form>
+<script>
+    const productForm = document.getElementById('productForm');
+productForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+    const formData = new FormData(productForm);
+
+    fetch('localhost:7000/api/v1/products/', {   // Your product creation endpoint 
+        method: 'POST',
+        body: formData 
+    })
+    .then(response => {
+        // Handle successful response (redirect, display success message, etc.)
+    })
+    .catch(error => {
+        // Handle errors
+    });
+});
+
+</script>    
+</body>
+</html>

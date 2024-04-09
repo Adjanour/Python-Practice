@@ -29,7 +29,7 @@ def DDA():
     x_cordinates = []
     y_cordinates = []
     
-    
+    #take note of floating points maylead to infinite loop
     while round(x) != round(x2) or round(y) != round(y2):  # Iterate until reaching the endpoint
         x += xinc
         y += yinc

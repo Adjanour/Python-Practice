@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload Test</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <h1>Image Management Test</h1>
+
+    <div>
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId">
+        <button id="fetchImages">Fetch Images</button>
+    </div>
+
+    <div id="imagesContainer"></div>
+
+    <div>
+        <h2>Upload Image</h2>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" id="imageInput" multiple> <div id="imagePreviews"></div>  <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>
