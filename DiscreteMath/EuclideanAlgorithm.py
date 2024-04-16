@@ -19,6 +19,7 @@ def euclideanAlgorithm(num1, num2)->int:
         num1, num2 = num2, num1
     while num2 != 0:
         remainder = num1 % num2
+        print(f"{num1} / {num2} = {round((num1-remainder)/num2)} x {num2} + {remainder} ")
         num1 = num2
         num2 = remainder
     return num1
